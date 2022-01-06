@@ -25,7 +25,7 @@ def main():
             
             ''')
     host = sys.argv[1]
-    nmap = subprocess.check_output(('nmap %s --min-rate=9999 | grep open ' % host ), shell=True)
+    nmap = subprocess.check_output(('nmap %s -p- -T4 --min-rate=9999 | grep open ' % host ), shell=True)
     nmap= str(nmap)
     # nmap = '''
     # 53/tcp  open     domain
