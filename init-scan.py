@@ -32,10 +32,10 @@ def main():
     # 80/tcp  open     http
     # 443/tcp open     https
     # '''
-    nmap = nmap.replace('\'','')
+    nmap = nmap.replace('b\'','')
     nmap = nmap.replace('tcp','')
     nmap = nmap.replace('open','\n')
-    nmap = nmap.replace('b','\\n')
+
 
 
     pattern = re.compile(r'(?<=\\n)(.*)(?=\/)', re.IGNORECASE)
